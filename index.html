@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>For You ❤️</title>
+
     <style>
         body {
             background: linear-gradient(to right, #ff9a9e, #fad0c4);
@@ -10,24 +11,6 @@
             padding: 80px;
             color: #3a3a3a;
         }
-        .poem {
-    white-space: pre-line;
-    font-size: 20px;
-    line-height: 1.8;
-}
-
-.photo {
-    width: 260px;
-    border-radius: 20px;
-    margin-bottom: 20px;
-    cursor: pointer;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
-    transition: 0.3s;
-}
-
-.photo:hover {
-    transform: scale(1.05);
-}
 
         .box {
             background: white;
@@ -38,13 +21,27 @@
             margin: auto;
         }
 
-        h1 {
-            font-size: 32px;
+        .photo {
+            width: 260px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+            transition: 0.3s;
         }
 
-        p {
+        .photo:hover {
+            transform: scale(1.05);
+        }
+
+        .poem {
+            white-space: pre-line;
             font-size: 20px;
-            line-height: 1.6;
+            line-height: 1.8;
+        }
+
+        h1 {
+            font-size: 32px;
         }
 
         .heart {
@@ -59,30 +56,36 @@
         }
     </style>
 </head>
-<script>
-let images = ["MAriah and ankush 2.jpeg","Mariahand ankush 1.jpeg","Mariah and ankush 3.jpeg"];
-let index = 0;
-
-function changePhoto(){
-    index++;
-    if(index >= images.length){
-        index = 0;
-    }
-    document.getElementById("photo").src = images[index];
-}
-</script>
 
 <body>
+
     <div class="box">
         <h1>For My Love 💕</h1>
-        <img id="photo" src="pic1.jpg" class="photo" onclick="changePhoto()">
-        <p>
-            She holds my hand so I won’t let hope depart,
-            She trusts my dreams more than my doubting heart.
-            She fears no roads ahead, she moves like a sea,
-            There is a girl who knows me better than me.
+
+        <img id="photo" src="pic1.jpeg" class="photo" onclick="changePhoto()">
+
+        <p class="poem">
+She holds my hand so I won’t let hope depart,
+She trusts my dreams more than my doubting heart.
+She fears no roads ahead, she moves like a sea,
+There is a girl who knows me better than me.
         </p>
+
         <div class="heart">❤️</div>
     </div>
+
+    <script>
+        let images = ["pic1.jpeg","pic2.jpeg","pic3.jpeg"];
+        let index = 0;
+
+        function changePhoto(){
+            index++;
+            if(index >= images.length){
+                index = 0;
+            }
+            document.getElementById("photo").src = images[index];
+        }
+    </script>
+
 </body>
 </html>
