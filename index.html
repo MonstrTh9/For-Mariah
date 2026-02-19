@@ -10,6 +10,18 @@
             padding: 80px;
             color: #3a3a3a;
         }
+.photo {
+    width: 260px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    transition: 0.3s;
+}
+
+.photo:hover {
+    transform: scale(1.05);
+}
 
         .box {
             background: white;
@@ -41,10 +53,23 @@
         }
     </style>
 </head>
+<script>
+let images = ["pic1.jpg","pic2.jpg","pic3.jpg"];
+let index = 0;
+
+function changePhoto(){
+    index++;
+    if(index >= images.length){
+        index = 0;
+    }
+    document.getElementById("photo").src = images[index];
+}
+</script>
 
 <body>
     <div class="box">
         <h1>For My Love 💕</h1>
+        <img id="photo" src="pic1.jpg" class="photo" onclick="changePhoto()">
         <p>
             She holds my hand so I won’t let hope depart,
             She trusts my dreams more than my doubting heart.
